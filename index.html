@@ -3,748 +3,1112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>James Taylor | Real Estate | Boulder County & Front Range</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <title>Exit Strategy Planning | For Long-Term Colorado Homeowners</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --dark: #1a1a1a;
-            --light-gray: #f8f8f8;
-            --medium-gray: #666;
-            --border-gray: #e5e5e5;
-            --accent: #2563eb;
-        }
-
+        
         body {
-            font-family: 'Sora', sans-serif;
-            color: var(--dark);
-            background: white;
-            line-height: 1.6;
+            font-family: 'Trebuchet MS', Arial, sans-serif;
+            line-height: 1.8;
+            color: #222;
+            background: #f5f5f5;
         }
-
-        /* Navigation */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: white;
-            z-index: 1000;
-            border-bottom: 1px solid var(--border-gray);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 1.5rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            font-size: 1.4rem;
-            font-weight: 600;
-            color: var(--dark);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 3rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--medium-gray);
-            text-decoration: none;
-            font-size: 0.95rem;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--dark);
-        }
-
-        .nav-phone {
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--dark);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .nav-phone:hover {
-            color: var(--accent);
-        }
-
+        
         /* Hero Section */
         .hero {
-            padding-top: 100px;
-            padding-bottom: 0;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-
-        .hero-container {
-            max-width: 1400px;
-            width: 100%;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            line-height: 1.2;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        .hero-content p {
-            font-size: 1.1rem;
-            color: var(--medium-gray);
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 4rem;
-        }
-
-        .btn-primary {
-            background: var(--dark);
+            background: linear-gradient(135deg, rgba(26, 58, 102, 0.6) 0%, rgba(15, 35, 64, 0.7) 100%), url('boulder-flatirons-hero.jpg');
+            background-size: cover;
+            background-position: center;
             color: white;
-            padding: 1rem 2.5rem;
-            border: none;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: background 0.3s ease;
-            display: inline-block;
+            padding: 5rem 1.5rem;
+            text-align: center;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-
-        .btn-primary:hover {
-            background: var(--accent);
-        }
-
-        .btn-secondary {
-            background: white;
-            color: var(--dark);
-            padding: 1rem 2.5rem;
-            border: 2px solid var(--dark);
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 0.95rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-block;
-        }
-
-        .btn-secondary:hover {
-            background: var(--light-gray);
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-top: 4rem;
-        }
-
-        .stat {
-            border-top: 1px solid var(--border-gray);
-            padding-top: 1.5rem;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--dark);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            color: var(--medium-gray);
-            font-weight: 500;
-        }
-
-        .hero-image {
-            height: 600px;
-            background-image: url('james-taylor-professional.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
-        }
-
-        /* Sections */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1400px;
+        
+        .hero-content {
+            max-width: 900px;
             margin: 0 auto;
         }
-
-        .section-header {
-            margin-bottom: 4rem;
-        }
-
-        .section-label {
-            font-size: 0.85rem;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title {
-            font-family: 'Playfair Display', serif;
+        
+        .hero h1 {
             font-size: 2.8rem;
-            color: var(--dark);
             margin-bottom: 1rem;
-            font-weight: 600;
+            font-weight: bold;
+            line-height: 1.3;
         }
-
-        .section-description {
-            font-size: 1.1rem;
-            color: var(--medium-gray);
-            max-width: 600px;
-            line-height: 1.7;
-        }
-
-        /* About Section */
-        .about {
-            background: var(--light-gray);
-        }
-
-        .about-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .about-content h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.2rem;
-            margin-bottom: 2rem;
-            color: var(--dark);
-            font-weight: 600;
-        }
-
-        .about-content p {
-            font-size: 1rem;
-            color: var(--medium-gray);
+        
+        .hero .subheading {
+            font-size: 1.5rem;
             margin-bottom: 1.5rem;
-            line-height: 1.8;
+            color: #e8f0f8;
+            font-weight: normal;
         }
-
-        .about-image {
-            height: 500px;
-            background-image: url('james-taylor-professional.jpg');
-            background-size: cover;
-            background-position: center;
-            border-radius: 8px;
+        
+        .hero .description {
+            font-size: 1.15rem;
+            color: #d0dce8;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
-
-        /* Services Section */
-        .services {
+        
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        .content-block {
             background: white;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
+        
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #1a3a66;
+            font-weight: bold;
         }
-
-        .service-card h3 {
+        
+        h3 {
             font-size: 1.4rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-            font-weight: 600;
+            margin: 1.5rem 0 1rem;
+            color: #0f2340;
+            font-weight: bold;
         }
-
-        .service-card p {
-            color: var(--medium-gray);
-            line-height: 1.7;
-            font-size: 0.95rem;
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
         }
-
-        /* Testimonials */
-        .testimonials {
-            background: var(--light-gray);
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, #f0f5fb 0%, #e8f0f8 100%);
+            padding: 2.5rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            text-align: center;
         }
-
-        .testimonials-grid {
+        
+        .stats {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3rem;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
         }
-
-        .testimonial-card {
+        
+        .stat {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #1a3a66;
+        }
+        
+        .stat-label {
+            font-size: 0.95rem;
+            color: #555;
+            margin-top: 0.5rem;
+            font-weight: normal;
+        }
+        
+        @media (max-width: 600px) {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Quiz/Calculator Section */
+        .quiz-section {
+            background: linear-gradient(135deg, #e8f0f8 0%, #f0f5fb 100%);
+            padding: 3rem 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(26, 58, 102, 0.15);
+            margin-bottom: 2rem;
+            border: 3px solid #1a3a66;
+        }
+        
+        @media (max-width: 600px) {
+            .quiz-section {
+                border: none;
+                padding: 2rem 1.5rem;
+                margin: 0;
+                border-radius: 0;
+                box-shadow: none;
+                background: white;
+            }
+        }
+        
+        .quiz-section h2 {
+            text-align: center;
+            margin-bottom: 0.5rem;
+            color: #0f2340;
+        }
+        
+        .quiz-progress {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 2rem;
+            font-weight: bold;
+        }
+        
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #1a3a66 0%, #2c5aa0 100%);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+        
+        .quiz-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .question {
+            margin-bottom: 2.5rem;
+            padding: 1.5rem;
+            background: #f9f9f9;
+            border-left: 4px solid #1a3a66;
+            border-radius: 4px;
+        }
+        
+        .question-text {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #0f2340;
+            margin-bottom: 1rem;
+        }
+        
+        .option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            cursor: pointer;
+        }
+        
+        .option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+        
+        .option label {
+            font-size: 1rem;
+            cursor: pointer;
+            margin: 0;
+        }
+        
+        .calculator-btn {
+            background: #1a3a66;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.3s;
+            margin-top: 1rem;
+        }
+        
+        .calculator-btn:hover {
+            background: #0f2340;
+        }
+        
+        .result-box {
+            background: white;
+            border: none;
+            padding: 0;
+            margin: 2rem 0;
+            display: none;
+        }
+        
+        .result-box.show {
+            display: block;
+        }
+        
+        .result-bubble {
+            background: white;
+            border: 2px solid #1a3a66;
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .result-bubble.header {
+            background: linear-gradient(135deg, #1a3a66 0%, #2c5aa0 100%);
+            color: white;
+            border: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-align: center;
+        }
+        
+        .result-bubble:nth-child(2) {
+            background: linear-gradient(135deg, #e8f0f8 0%, #f0f5fb 100%);
+            border-color: #2c5aa0;
+            border-left: 5px solid #2c5aa0;
+        }
+        
+        .result-bubble:nth-child(3) {
+            background: linear-gradient(135deg, #e8f5f5 0%, #f0fbfb 100%);
+            border-color: #1a7f7f;
+            border-left: 5px solid #1a7f7f;
+        }
+        
+        .result-bubble:nth-child(4) {
+            background: linear-gradient(135deg, #f5f0e8 0%, #fbf8f0 100%);
+            border-color: #8b6914;
+            border-left: 5px solid #8b6914;
+        }
+        
+        .result-bubble.cta {
+            background: linear-gradient(135deg, #1a3a66 0%, #2c5aa0 100%);
+            color: white;
+            border: none;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .result-bubble.cta p {
+            margin: 0.5rem 0;
+            color: white;
+        }
+        
+        .result-bubble.cta .phone {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 1rem 0;
+            color: white;
+        }
+        
+        .result-bubble.cta a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.75rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+        }
+        
+        .result-bubble.cta a:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        
+        .result-bubble ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .result-bubble li {
+            padding: 0.5rem 0;
+            margin: 0;
+        }
+        
+        .result-bubble li:before {
+            content: "→ ";
+            font-weight: bold;
+            color: #1a3a66;
+            margin-right: 0.5rem;
+        }
+        
+        @media (max-width: 600px) {
+            .result-bubble {
+                padding: 1.5rem;
+                margin: 1rem 0;
+                font-size: 1rem;
+            }
+            
+            .result-bubble.header {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Deprecated - keeping for reference */
+        .result-section {
+            display: none;
+        }
+        
+        .result-box h3 {
+            display: none;
+        }
+        
+        /* Situation Boxes */
+        .situation-box {
+            background: #f0f5fb;
+            border-left: 5px solid #1a3a66;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+        
+        .situation-box h3 {
+            color: #0f2340;
+            margin-top: 0;
+        }
+        
+        .situation-box p {
+            margin-bottom: 1rem;
+        }
+        
+        .situation-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Case Studies */
+        .case-study {
+            background: #f9f9f9;
+            border-radius: 4px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #1a3a66;
+        }
+        
+        .case-study h3 {
+            margin-top: 0;
+            color: #0f2340;
+        }
+        
+        .case-study .scenario {
+            font-size: 0.95rem;
+            color: #666;
+            font-style: italic;
+            margin: 0.5rem 0 1rem;
+        }
+        
+        .case-study .outcome {
+            background: #e8f0f8;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+        }
+        
+        .case-study .outcome strong {
+            color: #1a3a66;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: #1a3a66;
+            color: white;
+            padding: 2.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .cta-section h2 {
+            color: white;
+        }
+        
+        .cta-section p {
+            color: #d0dce8;
+            font-size: 1.1rem;
+        }
+        
+        .phone-link {
+            display: inline-block;
+            background: white;
+            color: #1a3a66;
+            padding: 1rem 2rem;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 1rem 0;
+            transition: all 0.3s;
+        }
+        
+        .phone-link:hover {
+            background: #e8f0f8;
+            transform: scale(1.05);
+        }
+        
+        .form-section {
             background: white;
             padding: 2.5rem;
             border-radius: 8px;
-            border-top: 3px solid var(--accent);
-        }
-
-        .testimonial-text {
-            font-size: 1rem;
-            color: var(--medium-gray);
-            margin-bottom: 1.5rem;
-            line-height: 1.8;
-            font-style: italic;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--dark);
-            font-size: 0.95rem;
-        }
-
-        .testimonial-role {
-            color: var(--medium-gray);
-            font-size: 0.85rem;
-            margin-top: 0.3rem;
-        }
-
-        /* Areas */
-        .areas {
-            background: white;
-        }
-
-        .areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .area-card {
-            text-align: center;
-            padding: 2rem 1rem;
-            border-radius: 8px;
-            background: var(--light-gray);
-            transition: all 0.3s ease;
-        }
-
-        .area-card:hover {
-            background: var(--dark);
-            color: white;
-        }
-
-        .area-card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: inherit;
-        }
-
-        /* Contact */
-        .contact {
-            background: var(--dark);
-            color: white;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-        }
-
-        .contact-item h3 {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .contact-item p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.05rem;
-        }
-
-        .contact-item a {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
-            color: white;
-        }
-
-        .form-group input,
-        .form-group textarea {
-            padding: 1rem;
-            border: none;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-
-        .form-group input::placeholder,
-        .form-group textarea::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-
-        .form-group textarea {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .form-submit {
-            background: var(--accent);
-            color: white;
-            padding: 1.2rem;
-            border: none;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: background 0.3s ease;
-        }
-
-        .form-submit:hover {
-            background: #1e40af;
-        }
-
-        /* Footer */
-        footer {
-            background: #0a0a0a;
-            color: rgba(255, 255, 255, 0.6);
-            padding: 3rem 2rem;
-            text-align: center;
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        footer p {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-logo {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             margin-bottom: 2rem;
         }
-
-        .footer-logo img {
-            max-height: 60px;
-            opacity: 0.8;
-            transition: opacity 0.3s ease;
+        
+        .form-section h2 {
+            text-align: center;
+            margin-bottom: 2rem;
         }
-
-        .footer-logo img:hover {
-            opacity: 1;
+        
+        form {
+            max-width: 600px;
+            margin: 0 auto;
         }
-
-        /* Responsive */
-        @media (max-width: 968px) {
-            .nav-links {
-                display: none;
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            font-size: 1.05rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #0f2340;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+        }
+        
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #1a3a66;
+            box-shadow: 0 0 0 3px rgba(26, 58, 102, 0.1);
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .submit-btn {
+            background: #1a3a66;
+            color: white;
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            width: 100%;
+            transition: background 0.3s;
+        }
+        
+        .submit-btn:hover {
+            background: #0f2340;
+        }
+        
+        footer {
+            background: #333;
+            color: #ccc;
+            padding: 2rem;
+            font-size: 1rem;
+            margin-top: 2rem;
+        }
+        
+        footer p {
+            margin: 0.75rem 0;
+            font-size: 1rem;
+        }
+        
+        .footer-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .footer-top {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #555;
+        }
+        
+        .footer-headshot {
+            width: 120px;
+            height: 120px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 3px solid #1a3a66;
+        }
+        
+        .footer-info h3 {
+            color: white;
+            margin: 0 0 0.5rem 0;
+            font-size: 1.15rem;
+        }
+        
+        .footer-info p {
+            margin: 0.3rem 0;
+            font-size: 0.95rem;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 0;
+        }
+        
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            height: 60px;
+            width: auto;
+        }
+        
+        .header-contact {
+            text-align: right;
+        }
+        
+        .header-contact a {
+            color: #1a3a66;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .header-contact p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        @media (max-width: 600px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
             }
             
-            .hero-container,
-            .about-container,
-            .contact-grid {
+            .footer-top {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                text-align: center;
             }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero-cta {
-                flex-direction: column;
+            
+            .footer-headshot {
+                margin: 0 auto;
             }
         }
     </style>
 </head>
 <body>
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="nav-logo">JAMES TAYLOR</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#areas">Areas</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="tel:7203406743" class="nav-phone">(720) 340-6743</a>
+    <header>
+        <div class="header-content">
+            <img src="logo.png" alt="Homestead Real Estate LLC" class="logo">
+            <div class="header-contact">
+                <p>Questions? Call James</p>
+                <a href="tel:7203406743">720-340-6743</a>
+            </div>
         </div>
-    </nav>
-
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1>Licensed Since 2009. Serving the Front Range.</h1>
-                <p>
-                    Expert real estate guidance for buyers and sellers across Boulder County and the greater Denver metro area. 120+ transactions, over $70M in sales volume, and a commitment to personalized service.
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-primary">Get Started</a>
-                    <a href="#about" class="btn-secondary">Learn More</a>
+    </header>
+    
+    <div class="hero">
+        <div class="hero-content">
+            <h1>You Made a Fortune.<br>Now What?</h1>
+            <p class="subheading">Strategic Exit Planning for Long-Term Colorado Homeowners</p>
+            <p class="description">You bought your home 15+ years ago. You watched it appreciate steadily. Now you have significant equity. But what's your next move? Sell? Hold? Rent it out? Pass it to your kids? Extract equity? There's no one right answer—but there is a right answer for YOUR situation.</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <h2>Your Home's Story</h2>
+            <div class="stats">
+                <div>
+                    <div class="stat">15+</div>
+                    <div class="stat-label">Years of Ownership</div>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">120+</span>
-                        <span class="stat-label">Transactions</span>
+                <div>
+                    <div class="stat">3-4x</div>
+                    <div class="stat-label">Likely Home Value Appreciation</div>
+                </div>
+                <div>
+                    <div class="stat">$100k-$500k+</div>
+                    <div class="stat-label">Equity in Your Home</div>
+                </div>
+            </div>
+            <p>You're not just a homeowner. You're someone who built real wealth. The question is: what do you do with it?</p>
+        </div>
+        
+        <!-- Quiz Section -->
+        <div class="quiz-section">
+            <h2>What's Your Best Move?</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Answer a few quick questions to explore your options.</p>
+            
+            <div class="quiz-container">
+                <div class="quiz-progress">Question <span id="currentQuestion">1</span> of <span id="totalQuestions">5</span></div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                
+                <div class="question" id="q1">
+                    <div class="question-text">What matters most to you right now?</div>
+                    <div class="option">
+                        <input type="radio" id="q1a" name="priority" value="cash">
+                        <label for="q1a">Unlocking cash / maximizing profit</label>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">$70M+</span>
-                        <span class="stat-label">Sales Volume</span>
+                    <div class="option">
+                        <input type="radio" id="q1b" name="priority" value="income">
+                        <label for="q1b">Creating ongoing income</label>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">5.0★</span>
-                        <span class="stat-label">Client Rating</span>
+                    <div class="option">
+                        <input type="radio" id="q1c" name="priority" value="legacy">
+                        <label for="q1c">Passing something to my kids</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q1d" name="priority" value="simplify">
+                        <label for="q1d">Simplifying my life</label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q2">
+                    <div class="question-text">Are you thinking about this move in the next:</div>
+                    <div class="option">
+                        <input type="radio" id="q2a" name="timeline" value="6months">
+                        <label for="q2a">6 months</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2b" name="timeline" value="1year">
+                        <label for="q2b">1 year</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2c" name="timeline" value="2years">
+                        <label for="q2c">2-3 years</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q2d" name="timeline" value="exploring">
+                        <label for="q2d">Just exploring (no timeline)</label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q3">
+                    <div class="question-text">What's the condition of your home?</div>
+                    <div class="option">
+                        <input type="radio" id="q3a" name="condition" value="excellent">
+                        <label for="q3a">Well-maintained, move-in ready</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3b" name="condition" value="good">
+                        <label for="q3b">Good condition, some updates needed</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3c" name="condition" value="needs-work">
+                        <label for="q3c">Older home, needs significant work</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q3d" name="condition" value="unsure">
+                        <label for="q3d">Not sure where to start</label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q4">
+                    <div class="question-text">How long have you owned your home?</div>
+                    <div class="option">
+                        <input type="radio" id="q4a" name="ownership" value="5-10">
+                        <label for="q4a">5-10 years</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4b" name="ownership" value="10-20">
+                        <label for="q4b">10-20 years</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q4c" name="ownership" value="20plus">
+                        <label for="q4c">20+ years</label>
+                    </div>
+                </div>
+                
+                <div class="question" id="q5">
+                    <div class="question-text">What's your main concern right now?</div>
+                    <div class="option">
+                        <input type="radio" id="q5a" name="concern" value="overwhelmed">
+                        <label for="q5a">Overwhelmed—too many decisions</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5b" name="concern" value="timing">
+                        <label for="q5b">Not sure if NOW is the right time</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5c" name="concern" value="value">
+                        <label for="q5c">Worried about what my home is worth</label>
+                    </div>
+                    <div class="option">
+                        <input type="radio" id="q5d" name="concern" value="process">
+                        <label for="q5d">Don't know what the process looks like</label>
+                    </div>
+                </div>
+                
+                <button class="calculator-btn" onclick="showResults()">Show My Options</button>
+                
+                <div id="resultBox" class="result-box">
+                    <h3>Your Exit Strategy Paths</h3>
+                    <p id="resultText"></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- No Matter Your Situation Section -->
+        <div class="content-block">
+            <h2>No Matter Your Situation, James Can Help</h2>
+            
+            <p><strong>Every person's exit strategy is different.</strong> And that's where most agents get it wrong. They try to push you toward a sale because that's how they get paid. James helps you figure out what actually makes sense for YOUR life.</p>
+            
+            <div class="situation-box">
+                <h3>Want to Maximize Profit?</h3>
+                <p>James will show you the timing strategy—when to sell to capture market strength, what improvements actually move the needle, and how market trends in Boulder County affect your price. He knows what's coming development-wise, so you're selling at the right moment.</p>
+            </div>
+            
+            <div class="situation-box">
+                <h3>Want to Keep It as Rental Income?</h3>
+                <p>Not every property is a good rental. James analyzes: tenant demand, appreciation potential, rental income vs. your carrying costs, tax implications. He'll be honest if your home is better as a rental or if selling makes more sense.</p>
+            </div>
+            
+            <div class="situation-box">
+                <h3>Want to Pass It to Your Kids?</h3>
+                <p>There are important considerations when passing on a property. Sell now vs. pass it on? What makes sense for your family? James talks you through the tradeoffs so your kids aren't stuck with a property they don't want or can't afford to keep.</p>
+            </div>
+            
+            <div class="situation-box">
+                <h3>Want to Extract Equity Without Selling?</h3>
+                <p>A cash-out refinance? A reverse mortgage? Renting part of your property (ADU)? Downsizing to a smaller property and keeping a second home? James explores every option, not just the one that generates a commission.</p>
+            </div>
+            
+            <div class="situation-box">
+                <h3>Don't Know What You Want?</h3>
+                <p>That's the most common situation. You have options, but you're not sure which one is right. James talks through scenarios with you, shows you the financial impact, answers your questions—as many as you have—until you feel confident in your direction.</p>
+            </div>
+            
+            <p style="margin-top: 2.5rem; font-size: 1.15rem; color: #0f2340; font-weight: bold;">The bottom line: James has worked with every type of exit strategy. Whatever you're considering, he knows how to help you execute it well.</p>
+        </div>
+        
+        <!-- Prioritization Section -->
+        <div class="content-block">
+            <h2>The Home Improvement Dilemma: What Actually Matters?</h2>
+            
+            <p>Here's what happens: You decide to sell (or think about selling), and suddenly you see <strong>fifty things</strong> that need fixing. The roof, the kitchen, the bathrooms, the paint, the landscaping, the fence. The list is endless.</p>
+            
+            <p>And you're stuck wondering: <strong>Do I have to fix all of this? Or can I sell as-is?</strong></p>
+            
+            <p>The answer is: <strong>It depends.</strong> And that's where most sellers get lost.</p>
+            
+            <div class="situation-box">
+                <h3>Here's What James Does</h3>
+                <p>He looks at your house. He looks at your market. He looks at your situation. Then he prioritizes for you.</p>
+                <p><strong>Some improvements actually pay for themselves.</strong> A fresh coat of paint, new flooring in the kitchen, updated bathroom fixtures—these catch buyer attention and move the needle on price. James knows which ones are worth doing.</p>
+                <p><strong>Some improvements are just expensive.</strong> A new roof, foundation work, major electrical updates—these are necessary to disclose, but they won't help you sell for more. Why spend $15,000 on a new roof if buyers are only going to negotiate down anyway? James helps you decide.</p>
+                <p><strong>Some homes sell better as-is.</strong> If your house is older, or in rough condition, there are buyers who actually want the "project." They want to renovate it their way. James knows how to find those buyers and sell faster without doing expensive fixes.</p>
+            </div>
+            
+            <p style="margin-top: 2rem;"><strong>The point:</strong> You don't have to do everything. And you probably shouldn't. James helps you make a smart list—the improvements that matter, the ones to skip, and the ones that don't exist (because they weren't worth worrying about in the first place).</p>
+            
+            <p>You'll feel better, spend less, and still sell your home for what it's worth.</p>
+        </div>
+        
+        <!-- Case Studies -->
+        <div class="content-block">
+            <h2>Real Stories from Boulder County Homeowners</h2>
+            
+            <div class="case-study">
+                <h3>The Family Move</h3>
+                <div class="scenario">Long-time Boulder County homeowners, but their family was moving out of state</div>
+                <p>They had to make a choice: stay in their home or be closer to family. It was emotional and complicated. James helped them work through the decision, then managed the sale so they could relocate with confidence. Now they're where their family is, and that mattered more than the house.</p>
+                <div class="outcome"><strong>Outcome:</strong> Successful sale + freedom to make the move that mattered most</div>
+            </div>
+            
+            <div class="case-study">
+                <h3>The New Retiree</h3>
+                <div class="scenario">Recently retired, owned their family home for decades, ready to downsize</div>
+                <p>They had a massive to-do list—repairs, updates, painting, deep cleaning. They weren't sure what was essential and what was just "nice to have." James sat down with them and got real. "Do these three things. Skip the rest." They made smart, targeted improvements, sold faster, and got great money. Now they're in a smaller home with zero maintenance and more money to enjoy retirement.</p>
+                <div class="outcome"><strong>Outcome:</strong> Smart downsizing + full equity + peace of mind</div>
+            </div>
+            
+            <div class="case-study">
+                <h3>The As-Is Sale</h3>
+                <div class="scenario">Boulder homeowner with a house in terrible condition—old, dated, needed major work</div>
+                <p>Most agents would say, "You need to renovate this." James didn't. He knew the market. He knew there were cash buyers looking for exactly this—a project they could renovate themselves. He found a buyer off-market. No listing, no repairs, no expense, cash deal, quick close. The seller didn't spend a dime fixing the house.</p>
+                <div class="outcome"><strong>Outcome:</strong> Cash sale as-is + no renovation costs + fast close</div>
+            </div>
+        </div>
+        
+        <!-- CTA -->
+        <div class="cta-section">
+            <h2>Ready to Explore Your Options?</h2>
+            <p>Get a free, no-pressure consultation with James. He'll help you think through your situation, answer your questions, and show you what's actually possible.</p>
+            <a href="tel:7203406743" class="phone-link">📞 Call James: 720-340-6743</a>
+            <p style="font-size: 0.95rem; margin-top: 1.5rem;">Available to talk Monday–Friday, 9am–6pm MST</p>
+        </div>
+        
+        <!-- About James -->
+        <div class="content-block">
+            <h2>About James Taylor</h2>
+            
+            <h3 style="font-size: 2rem; color: #1a3a66; font-weight: bold; margin-top: 0;">Licensed Since 2009. Serving the Front Range.</h3>
+            
+            <p>Expert real estate guidance for buyers and sellers across Boulder County and the greater Denver metro area.</p>
+            
+            <div class="stats-section" style="background: linear-gradient(135deg, #e8f0f8 0%, #f0f5fb 100%); margin: 2rem 0; padding: 2rem; border-radius: 8px; border: 2px solid #1a3a66;">
+                <div class="stats">
+                    <div>
+                        <div class="stat" style="color: #1a3a66;">120+</div>
+                        <div class="stat-label">Transactions</div>
+                    </div>
+                    <div>
+                        <div class="stat" style="color: #2c5aa0;">$70M+</div>
+                        <div class="stat-label">Sales Volume</div>
+                    </div>
+                    <div>
+                        <div class="stat" style="color: #1a7f7f;">5.0★</div>
+                        <div class="stat-label">Client Rating</div>
                     </div>
                 </div>
             </div>
-            <div class="hero-image"></div>
+            
+            <p style="font-size: 1.15rem; font-weight: bold; color: #0f2340;">A commitment to personalized service.</p>
+            
+            <p>James doesn't believe in one-size-fits-all solutions. He listens to your situation, understands your goals, and helps you make the decision that's right for YOU—not what's easiest for him or what the market is doing.</p>
+            
+            <p>With 15 years of experience in Boulder County, he knows the market, knows the neighborhoods, and knows how to help homeowners navigate complex decisions with clarity and confidence.</p>
         </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="section-header">
-            <div class="section-label">About</div>
-            <h2 class="section-title">Your Trusted Real Estate Partner</h2>
-        </div>
-        <div class="about-container">
-            <div class="about-content">
-                <h3>Expert Real Estate Professional</h3>
-                <p>
-                    Licensed since 2009 with 120+ transactions and over $70M in sales volume, I've helped hundreds of buyers and sellers navigate one of the most competitive real estate markets in the country.
-                </p>
-                <p>
-                    My approach combines deep market expertise, strategic thinking, and personalized service. Whether you're a first-time buyer, seasoned investor, or looking to sell your family home, I bring integrity, knowledge, and unwavering commitment to every transaction.
-                </p>
-                <p>
-                    Available 24/7 because your real estate goals don't keep business hours. Let's work together to achieve yours.
-                </p>
-            </div>
-            <div class="about-image"></div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="section-header">
-            <div class="section-label">Services</div>
-            <h2 class="section-title">What I Offer</h2>
-        </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <h3>Buyer Representation</h3>
-                <p>
-                    Expert guidance from property search through closing. Strategic negotiations and detailed market analysis to help you find the right home at the right price.
-                </p>
-            </div>
-            <div class="service-card">
-                <h3>Seller Representation</h3>
-                <p>
-                    Strategic marketing, professional staging advice, and skilled negotiation to maximize your home's value and sell quickly in today's market.
-                </p>
-            </div>
-            <div class="service-card">
-                <h3>Investment Properties</h3>
-                <p>
-                    Market analysis and opportunities identification to help you build wealth through real estate. Off-market deals and cash flow analysis included.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="testimonials" class="testimonials">
-        <div class="section-header">
-            <div class="section-label">Testimonials</div>
-            <h2 class="section-title">What Clients Say</h2>
-        </div>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "James is wonderful to work with! We bought our first home this past April and couldn't have done it without him. He was extremely responsive, knowledgeable and compassionate throughout the whole process. We LOVE our new home and we are so glad that we worked with James."
-                </p>
-                <div class="testimonial-author">Colorado Homebuyer</div>
-                <div class="testimonial-role">First-Time Buyer</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "James did a fantastic job guiding my wife and me through the purchase process of our new home. He was easy to work with, knew when to give us space and when to jump in with additional info. He helped us understand different communities and settle on a neighborhood we loved."
-                </p>
-                <div class="testimonial-author">California to Colorado Move</div>
-                <div class="testimonial-role">Home Buyer</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "James helped us buy and sell a home in Longmont, Colorado. He's very professional, knowledgeable, honest and patient. I'd use him again in a heartbeat!"
-                </p>
-                <div class="testimonial-author">Longmont Clients</div>
-                <div class="testimonial-role">Buyer & Seller</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "James is great! He helped guide my husband and me through the entire process of buying our first home. He got us in to see our future house the day it went on the market. When we had to relocate, we knew we would go with James to sell our house."
-                </p>
-                <div class="testimonial-author">Colorado Family</div>
-                <div class="testimonial-role">Buyer & Seller</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "James was on-point, several times he got us in to see places that were just listed before anyone else had seen them which ultimately allowed us to buy one of the few non zillion-dollar homes for sale in Boulder. He was patient with our vague search and ultimately won us over."
-                </p>
-                <div class="testimonial-author">Boulder Buyer</div>
-                <div class="testimonial-role">Home Buyer</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "James helped our daughter and her family find a home and it went very smoothly. It wasn't an easy task with our visits being short and infrequent, but he stuck with us. He took care of everything in a professional and timely manner and made the entire experience seem easy."
-                </p>
-                <div class="testimonial-author">Family Referral</div>
-                <div class="testimonial-role">Home Buyer</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "Working with James was so easy, he had an excellent grasp on what we were looking for and was SUPER patient with us through the whole process. As first time home buyers, James was able to clearly answer all questions and help us understand the ins and outs."
-                </p>
-                <div class="testimonial-author">First-Time Buyers</div>
-                <div class="testimonial-role">Home Buyers</div>
-            </div>
-            <div class="testimonial-card">
-                <p class="testimonial-text">
-                    "James did a fantastic job selling our house in Longmont. He is the most responsive agent I've ever worked with and his attention to detail is great."
-                </p>
-                <div class="testimonial-author">Longmont Seller</div>
-                <div class="testimonial-role">Home Seller</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="areas" class="areas">
-        <div class="section-header">
-            <div class="section-label">Service Areas</div>
-            <h2 class="section-title">Coverage Across the Front Range</h2>
-        </div>
-        <div class="areas-grid">
-            <div class="area-card"><h3>Longmont</h3></div>
-            <div class="area-card"><h3>Boulder</h3></div>
-            <div class="area-card"><h3>Denver Metro</h3></div>
-            <div class="area-card"><h3>Niwot</h3></div>
-            <div class="area-card"><h3>Loveland</h3></div>
-            <div class="area-card"><h3>Fort Collins</h3></div>
-            <div class="area-card"><h3>Louisville</h3></div>
-            <div class="area-card"><h3>Lafayette</h3></div>
-            <div class="area-card"><h3>Broomfield</h3></div>
-            <div class="area-card"><h3>Frederick</h3></div>
-            <div class="area-card"><h3>Firestone</h3></div>
-            <div class="area-card"><h3>Berthoud</h3></div>
-            <div class="area-card"><h3>Lyons</h3></div>
-            <div class="area-card"><h3>Superior</h3></div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="section-header">
-            <div class="section-label">Contact</div>
-            <h2 class="section-title">Let's Connect</h2>
-        </div>
-        <div class="contact-grid">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <p><a href="tel:7203406743">(720) 340-6743</a></p>
-                </div>
-                <div class="contact-item">
-                    <h3>Office</h3>
-                    <p>Homestead Real Estate LLC</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Location</h3>
-                    <p>Serving Boulder County & Front Range</p>
-                </div>
-            </div>
-            <form class="contact-form" onsubmit="handleSubmit(event)">
+        
+        <!-- Form -->
+        <div class="form-section">
+            <h2>Or Schedule a Free Consultation</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Tell James a bit about your situation. He'll call to discuss your options.</p>
+            
+            <form action="https://formspree.io/f/xwvjarpr" method="POST">
                 <div class="form-group">
-                    <label>Name</label>
-                    <input type="text" name="name" placeholder="Your name" required>
+                    <label for="name">Your Name *</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="Your email" required>
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Phone</label>
-                    <input type="tel" name="phone" placeholder="Your phone">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
+                
                 <div class="form-group">
-                    <label>Message</label>
-                    <textarea name="message" placeholder="Tell me about your real estate goals" required></textarea>
+                    <label for="address">Your Home Address (optional)</label>
+                    <input type="text" id="address" name="address" placeholder="Help us understand your property better">
                 </div>
-                <button type="submit" class="form-submit">Send Message</button>
+                
+                <div class="form-group">
+                    <label for="situation">What's your main interest? *</label>
+                    <textarea id="situation" name="situation" placeholder="e.g., Thinking about selling and downsizing, Want to explore keeping it as rental income, Not sure what to do next..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Schedule Free Consultation</button>
+                
+                <p style="text-align: center; font-size: 0.95rem; color: #666; margin-top: 1.5rem;">James will reach out within 24 hours. No commitment, no pressure.</p>
             </form>
         </div>
-    </section>
-
+    </div>
+    
     <footer>
-        <div class="footer-logo">
-            <img src="logo.png" alt="Homestead Real Estate LLC">
+        <div class="footer-content">
+            <div class="footer-top">
+                <img src="james-taylor-professional.jpg" alt="James Taylor" class="footer-headshot">
+                <div class="footer-info">
+                    <h3>James Taylor</h3>
+                    <p><strong>Homestead Real Estate LLC</strong></p>
+                    <p>15 Years Serving Boulder County</p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="margin-top: 2rem;">
+                <p style="font-size: 1.3rem; color: white; font-weight: bold; margin: 0.5rem 0;">720-340-6743</p>
+                <p style="font-size: 1.3rem; color: white; font-weight: bold; margin: 0.5rem 0;">JamesTaylorHomeSales@gmail.com</p>
+                <p style="font-size: 1.3rem; color: white; font-weight: bold; margin: 1rem 0;">JamesTaylorHomeSales.com</p>
+                <p style="margin-top: 2rem;">Longmont, Colorado | Serving Boulder County</p>
+                <p style="font-size: 0.8rem; margin-top: 1rem;">This website is designed for advertising purposes. All inquiries are handled with discretion and confidentiality.</p>
+            </div>
         </div>
-        <p>© 2025 James Taylor | Homestead Real Estate LLC | All Rights Reserved</p>
-        <p>Broker Associate | REALTOR® | Licensed Since 2009</p>
     </footer>
-
+    
     <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            alert('Thank you for your message. I will get back to you soon.');
-            event.target.reset();
+        // Set total questions
+        document.getElementById('totalQuestions').textContent = '5';
+        
+        // Update progress bar when user selects an answer
+        const radioButtons = document.querySelectorAll('input[type="radio"]');
+        radioButtons.forEach(radio => {
+            radio.addEventListener('change', updateProgress);
+        });
+        
+        function updateProgress() {
+            const totalQuestions = 5;
+            const answeredQuestions = document.querySelectorAll('input[type="radio"]:checked').length;
+            const progress = (answeredQuestions / totalQuestions) * 100;
+            document.getElementById('progressFill').style.width = progress + '%';
+            document.getElementById('currentQuestion').textContent = Math.min(answeredQuestions + 1, totalQuestions);
+        }
+        
+        function showResults() {
+            const priority = document.querySelector('input[name="priority"]:checked')?.value;
+            const timeline = document.querySelector('input[name="timeline"]:checked')?.value;
+            const condition = document.querySelector('input[name="condition"]:checked')?.value;
+            const ownership = document.querySelector('input[name="ownership"]:checked')?.value;
+            const concern = document.querySelector('input[name="concern"]:checked')?.value;
+            const resultBox = document.getElementById('resultBox');
+            const resultText = document.getElementById('resultText');
+            
+            if (!priority || !timeline || !condition || !ownership || !concern) {
+                alert('Please answer all questions');
+                return;
+            }
+            
+            // Submit quiz data via email
+            submitQuizData(priority, timeline, condition, ownership, concern);
+            
+            // Generate goal text
+            let goalText = '';
+            if (priority === 'cash') {
+                goalText = 'Maximize Profit';
+            } else if (priority === 'income') {
+                goalText = 'Create Income';
+            } else if (priority === 'legacy') {
+                goalText = 'Help Your Family';
+            } else if (priority === 'simplify') {
+                goalText = 'Simplify Life';
+            }
+            
+            // Generate timeline text
+            let timelineText = '';
+            let actionItems = [];
+            if (timeline === '6months') {
+                timelineText = '6 Months — Start Prepping Now';
+                actionItems = [
+                    'Get a home inspection (know what needs fixing)',
+                    'Research comparable homes in your target area',
+                    'Start packing non-essentials',
+                    'Think about what you want in your next home'
+                ];
+            } else if (timeline === '1year') {
+                timelineText = '1 Year — Perfect Window';
+                actionItems = [
+                    'Start visualizing your next chapter',
+                    'Research neighborhoods you\'re considering',
+                    'Get your home professionally appraised',
+                    'Explore financing options for your next purchase'
+                ];
+            } else if (timeline === '2years') {
+                timelineText = '2-3 Years — Plenty of Time';
+                actionItems = [
+                    'Watch market trends (don\'t panic, you have time)',
+                    'Explore different neighborhoods without pressure',
+                    'Make selective improvements if they truly matter',
+                    'Plan the lifestyle you want in your next home'
+                ];
+            } else if (timeline === 'exploring') {
+                timelineText = 'Just Exploring — No Rush';
+                actionItems = [
+                    'Start asking yourself: What would simplify my life?',
+                    'Talk to friends who\'ve downsized (learn from them)',
+                    'Research what\'s available in your price range',
+                    'Schedule a conversation with James (no obligation)'
+                ];
+            }
+            
+            let actionHTML = actionItems.map(item => `<li>${item}</li>`).join('');
+            
+            let message = `
+                <div class="result-bubble header">Great! Here's the Plan...</div>
+                
+                <div class="result-bubble">
+                    <strong>GOAL: ${goalText}</strong>
+                </div>
+                
+                <div class="result-bubble">
+                    <strong>Timeline: ${timelineText}</strong>
+                </div>
+                
+                <div class="result-bubble">
+                    <strong>Next Steps:</strong>
+                    <ul>${actionHTML}</ul>
+                </div>
+                
+                <div class="result-bubble cta">
+                    <p>Ready to move forward?</p>
+                    <p><strong>Call James for a free, no-obligation consultation.</strong></p>
+                    <a href="tel:7203406743" class="phone">720-340-6743</a>
+                </div>
+            `;
+            
+            resultText.innerHTML = message;
+            resultBox.classList.add('show');
+            resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+        
+        function submitQuizData(priority, timeline, condition, ownership, concern) {
+            // Create form data to submit quiz responses
+            const formData = new FormData();
+            formData.append('_subject', 'New Quiz Submission - Exit Strategy');
+            formData.append('Quiz Source', 'Exit Strategy Quiz');
+            formData.append('Priority/Goal', priority);
+            formData.append('Timeline', timeline);
+            formData.append('Home Condition', condition);
+            formData.append('Years of Ownership', ownership);
+            formData.append('Main Concern', concern);
+            formData.append('_captcha', 'false');
+            
+            // Send to Formspree
+            fetch('https://formspree.io/f/xwvjarpr', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).catch(err => {
+                // Silently fail - doesn't interrupt user experience
+            });
         }
     </script>
 </body>
